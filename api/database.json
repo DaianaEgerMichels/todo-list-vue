@@ -1,9 +1,9 @@
 {
   "todos": [
     {
-      "id": 1,
-      "title": "Estudar javascript",
-      "completed": true
+      "title": "Estudar Javascript",
+      "completed": true,
+      "id": 1
     },
     {
       "id": 2,
