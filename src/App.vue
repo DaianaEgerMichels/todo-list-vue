@@ -1,26 +1,19 @@
 <template>
-  <!-- Content -->
     <div class="px-3 py-10 md:px-10">
         <div class="w-full sm:w-1/2 lg:w-1/3 mx-auto">
 
-            <!-- Todo spinner -->
-            <TodoSpinner/>
-            <!--/ Todo spinner -->
+            <TodoSpinner v-if="loading" />
 
-            <!-- Todo form -->
-            <TodoFormAdd/>
-            <!--/ Todo form -->
+            <template v-else>
+                <TodoFormAdd />
 
-            <!--/ Todo items -->
-            <TodoItems/>
-            <!--/ Todo items -->
+                <TodoItems />
 
-            <!-- Todo empty -->
-            <TodoEmpty/>
-            <!--/ Todo empty -->
+                <TodoEmpty />
+            </template>
+
         </div>
     </div>
-    <!--/ Content -->
 </template>
 
 <script>
@@ -36,23 +29,18 @@ export default {
 
     data() {
         return {
-            todos: []
+            loading: false
         }
     },
 
-    //opção 01:
-    // async created() {
-    //     this.todos = await axios.get('http://localhost:3000/todos')
-    //         .then((response)=>{
-    //             response.data;
-    //         })
-    // }
-
-    //opção 02:
     created() {
+        this.loading = true
         axios.get('http://localhost:3000/todos')
-            .then((response)=>{
-                this.todos= response.data;
+            .then((response) => {
+                this.$store.commit('storeTodos', response.data);
+            })
+            .finally(() => {
+                this.loading = false
             })
     }
 
