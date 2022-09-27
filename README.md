@@ -1,5 +1,8 @@
 # To Do List in Vue
 
+![image](https://user-images.githubusercontent.com/87542739/192406543-377fd35b-a289-41ed-a2c6-41520969fc4b.png)
+
+
 ## Project setup
 ```
 npm install
