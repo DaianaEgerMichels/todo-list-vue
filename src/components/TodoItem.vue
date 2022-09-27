@@ -69,8 +69,8 @@ export default {
             const payload = {
                 id: this.todo.id,
                 data: {
-                    title: this.todo.title,
-                    completed: this.todo.completed
+                    title: this.title,
+                    completed: this.isCompleted
                 }
             }
             this.$store.dispatch('updateTodo', payload)
