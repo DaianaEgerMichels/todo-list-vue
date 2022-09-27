@@ -1,27 +1,19 @@
 {
   "todos": [
     {
-      "title": "Estudar Javascript",
+      "title": "Estudar Vue",
       "completed": true,
       "id": 1
     },
     {
-      "id": 2,
-      "title": "Estudar Vue",
-      "completed": false
-    },
-    {
-      "id": 3,
-      "title": "Estudar composition API",
-      "completed": false
-    },
-    {
-      "title": "Estudar TailwindCSS",
+      "title": "Estudar nuxt",
       "completed": false,
-      "id": 4
+      "id": 2
     },
     {
-      "id": 5
+      "title": "Estudar Tailwindcss",
+      "completed": false,
+      "id": 3
     }
   ]
 }
