@@ -1,4 +1,4 @@
-# todo-list
+# To Do List in Vue
 
 ## Project setup
 ```
@@ -10,6 +10,13 @@ npm install
 npm run serve
 ```
 
+### Database json-server
+```
+cd api
+```
+```
+npx json-server database.json
+```
 ### Compiles and minifies for production
 ```
 npm run build
@@ -19,6 +26,3 @@ npm run build
 ```
 npm run lint
 ```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
